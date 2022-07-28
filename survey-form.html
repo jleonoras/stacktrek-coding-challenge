@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey Form</title>
+</head>
+<body>
+    <h1>Survey Form</h1>
+    <form>
+        <center><h1>Employee Interests Survey Form</h1></center>
+        <div style="text-align: center">
+                <label for="name">Enter your name:</label>
+                <input type="text" id="name">
+            </div>
+            <br/>
+            <div style="text-align: center">
+                <label for="department">Enter your department:</label>
+                <input type="text" id="department">
+            </div>
+            <br/>
+            <div style="text-align: center">
+                <label>Tell us about yourself:</label>
+                <textarea name="about" rows="5" cols="25"></textarea>
+            </div>
+            <br/>
+            <div style="text-align: center">
+                <label>Do you exercise at home?</label>
+                <input type="radio" id="Yes" name="question" value="Yes">
+                <label for="Yes">Yes</label>
+                <input type="radio" id="No" name="question" value="No">
+                <label for="No">No</label>
+            </div>
+            <br/>
+            <div style="text-align: center">
+                <label>How do you like to read about your favorite topics?</label><br/>
+                <br/>
+                <input type="checkbox" id="topics1" name="topics1" value="Books">
+                <label for="topics1"> Books</label>
+                <input type="checkbox" id="topics2" name="topics2" value="Online resources">
+                <label for="topics2"> Online resources</label>
+                <input type="checkbox" id="topics3" name="topics3" value="Phone apps">
+                <label for="topics3"> Phone apps</label>
+                <input type="checkbox" id="topics4" name="topics4" value="Magazines">
+                <label for="topics4"> Magazines</label>
+            </div>
+            <br/>
+            <div style="text-align: center">
+                <label for="genre">What genre of movies do you like? </label>
+                <select id="genre" name="genre" size="1">
+                <option value="comedy" selected>comedy</option>
+                <option value="horror">horror</option>
+                <option value="sci-fi">sci-fi</option>
+                </select>
+            </div>
+            <br/>
+            <div style="text-align: center">
+                <input type="submit"
+                value="Submit form">
+            </div>
+        </div>
+    </form>
+</body>
+</html>
