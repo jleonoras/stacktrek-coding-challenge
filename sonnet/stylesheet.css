@@ -1,0 +1,30 @@
+body {
+    background-color: #5b7fbd;
+    }
+
+h1 {
+    /* font-family: DejaVu Sans Mono, monospace; */
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-style: normal;
+}
+
+p {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+ul {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+    list-style-position: inside;
+
+}
+
+#info {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-style: italic;
+    font-size: 11px;
+}
+
+.link_color {
+    color: blueviolet;
+}
