@@ -11,14 +11,14 @@
     <img src="christmas-tree.svg" alt="Christmas Tree" title="Christmas Tree">
     <h1 id="countdown"></h1>
     <script>
-        var currentDate = new Date();
+        let currentDate = new Date();
         // var xMas = new Date("December 25, 2022 00:00:00")
-        var xMas = new Date (currentDate.getFullYear(), 11, 25) // Christmas Date
+        let xMas = new Date (currentDate.getFullYear(), 11, 25) // Christmas Date
         one_day = 1000 * 60 * 60 * 24 // Day time in (milliseconds)
         diffInTime = xMas - currentDate // Difference of the two dates (Time)
         remainingDays = diffInTime / one_day // Convert ms to days
 
-        countDown = "Christmas" + "<br>" + "In" + " " + Math.ceil(remainingDays) + " " + "days"
+        const countDown = "Christmas" + "<br>" + "In" + " " + Math.ceil(remainingDays) + " " + "days"
         
         document.getElementById("countdown").innerHTML = countDown;
     </script>
