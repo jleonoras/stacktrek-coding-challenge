@@ -1,0 +1,16 @@
+#border {
+    border: 1px;
+    border-style: solid;
+    text-align: center;
+    width: 175px;
+    font-size: 12px;
+    overflow: hidden;
+    min-height: min-content;
+    max-height: max-content;
+}
+
+img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+}
