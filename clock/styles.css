@@ -1,0 +1,8 @@
+div {
+    border: 1px;
+    width: 14%;
+    border-style: solid;
+    text-align: center;
+    border-color: gray;
+    border-radius: 50%;
+}
