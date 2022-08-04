@@ -1,8 +1,21 @@
-div {
+#wrap {
+    /* border: 1px;
+    border-style: solid; */
+    width: fit-content;
+}
+
+#circleClock {
     border: 1px;
-    width: 14%;
+    width: fit-content;
     border-style: solid;
     text-align: center;
     border-color: gray;
     border-radius: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 3px;
+}
+
+#timeNowResult {
+    font-weight: bold;
 }
