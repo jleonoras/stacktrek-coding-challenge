@@ -1,0 +1,33 @@
+#resultBox {
+    border: 1px;
+    border-style: solid;
+    color: black;
+    height: 100px;
+
+    line-height: 10px;
+}
+
+#resultInF {
+    text-align: center;
+    color: gray;
+}
+
+#result {
+    text-align: center;
+    color: gray;
+}
+
+#inner {
+    margin-top: 35px;
+}
+
+#group {
+    width: fit-content;
+    height: fit-content;
+}
+
+#convertButton {
+    border-radius: 12px;
+    border: 1px;
+    border-style: solid;
+}
