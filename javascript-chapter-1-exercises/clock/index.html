@@ -1,76 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Clock</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
     <div id="wrap">
-        <div>
-            <p id="timeNowResult"></p>
+      <div>
+        <p id="timeNowResult"></p>
+      </div>
+      <div>
+        <div id="circleClock">
+          <h1 id="monthAndDate"></h1>
+          <h1 id="timeToday"></h1>
+          <h3 id="dayToday"></h3>
         </div>
-        <div>
-            <div id="circleClock">
-                <h1 id="monthAndDate"></h1>
-                <h1 id="timeToday"></h1>
-                <h3 id="dayToday"></h3>
-            </div>
-        </div>
+      </div>
     </div>
     <script type="text/javascript">
-        dayName = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+      dayName = [
+        "Sunday",
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday",
+      ];
 
-        monthName = ["January", "February", "March", "April", "May", "June",
-                    "July", "August", "September", "October", "November", "December"];
+      monthName = [
+        "January",
+        "February",
+        "March",
+        "April",
+        "May",
+        "June",
+        "July",
+        "August",
+        "September",
+        "October",
+        "November",
+        "December",
+      ];
 
-        const clockNow = new Date();
-        let monthNow = monthName[clockNow.getMonth()];
-        let dayNow = dayName[clockNow.getDay()];
-        let dateNow = clockNow.getDate();
+      const clockNow = new Date();
+      let monthNow = monthName[clockNow.getMonth()];
+      let dayNow = dayName[clockNow.getDay()];
+      let dateNow = clockNow.getDate();
 
-        let hourNow = clockNow.getHours();
-        let minuteNow = clockNow.getMinutes();
-        let secondsNow = clockNow.getSeconds();
+      let hourNow = clockNow.getHours();
+      let minuteNow = clockNow.getMinutes();
+      let secondsNow = clockNow.getSeconds();
 
-        function formatHour(x) {
-            if (x > 12) {
-                hourFormat = x - 12
-            } else {
-                hourFormat = x
-            }
-            return hourFormat;
+      function formatHour(x) {
+        if (x > 12) {
+          hourFormat = x - 12;
+        } else {
+          hourFormat = x;
         }
-        const formattedHour = formatHour(clockNow.getHours());
+        return hourFormat;
+      }
+      const formattedHour = formatHour(clockNow.getHours());
 
-        function addZero(y) {
-            if (y < 10) {
-                y = "0" + y
-            }
-            return y;
+      function addZero(y) {
+        if (y < 10) {
+          y = "0" + y;
         }
+        return y;
+      }
 
-        function getAmPm(z) {
-            if (z < 12) {
-                z = "AM"
-            } else {
-                z = "PM"
-            }
-            return z;
+      function getAmPm(z) {
+        if (z < 12) {
+          z = "AM";
+        } else {
+          z = "PM";
         }
-        const amPm = getAmPm(clockNow.getHours());
+        return z;
+      }
+      const amPm = getAmPm(clockNow.getHours());
 
-        const twoDigitHour = addZero(formattedHour);
-        const twoDigitMinute = addZero(minuteNow);
-        const twoDigitSeconds = addZero(secondsNow);
+      const twoDigitHour = addZero(formattedHour);
+      const twoDigitMinute = addZero(minuteNow);
+      const twoDigitSeconds = addZero(secondsNow);
 
-        const clockResult = `Today is : ${dayNow}. Current time is : ${monthNow} ${dateNow} ${twoDigitHour}:${twoDigitMinute} ${amPm}`;
-        document.getElementById("timeNowResult").innerHTML = clockResult;
+      const clockResult = `Today is : ${dayNow}. Current time is : ${monthNow} ${dateNow} ${twoDigitHour}:${twoDigitMinute} ${amPm}`;
+      document.getElementById("timeNowResult").innerHTML = clockResult;
 
-        document.getElementById("monthAndDate").innerHTML = `${monthNow} ${dateNow}`
-        document.getElementById("timeToday").innerHTML = `${twoDigitHour}:${twoDigitMinute}:${twoDigitSeconds} ${amPm}`
-        document.getElementById("dayToday").innerHTML = `${dayNow}`
+      document.getElementById(
+        "monthAndDate"
+      ).innerHTML = `${monthNow} ${dateNow}`;
+      document.getElementById(
+        "timeToday"
+      ).innerHTML = `${twoDigitHour}:${twoDigitMinute}:${twoDigitSeconds} ${amPm}`;
+      document.getElementById("dayToday").innerHTML = `${dayNow}`;
     </script>
-</body>
+  </body>
 </html>

@@ -1,34 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Car</title>
-    <link rel="stylesheet" href="stylesheet.css">
-</head>
-<body>
+    <link rel="stylesheet" href="stylesheet.css" />
+  </head>
+  <body>
     <div>
-        <img src="car.png" alt="Car" title="Car">
-        <div id="boxDetails">
+      <img src="car.png" alt="Car" title="Car" />
+      <div id="boxDetails">
         <p id="carDetails"></p>
+      </div>
     </div>
     <script>
-        var car = {
-            manufacturer: "Toyota",
-            makeAndModel: "Corolla AE101",
-            engine: "1,3 2E",
-            bodyStyle: "Sedan"
-        };
-        generateCarDetails = "Manufacturer" + ":" + " " + car.manufacturer
-                            + "<br>"
-                            + "Make and Model" + ":" + " " + car.makeAndModel
-                            + "<br>"
-                            + "Engine" + ":" + " " + car.engine
-                            + "<br>"
-                            + "Body Style" + ":" + " " + car.bodyStyle
+      var car = {
+        manufacturer: "Toyota",
+        makeAndModel: "Corolla AE101",
+        engine: "1,3 2E",
+        bodyStyle: "Sedan",
+      };
+      generateCarDetails =
+        "Manufacturer" +
+        ":" +
+        " " +
+        car.manufacturer +
+        "<br>" +
+        "Make and Model" +
+        ":" +
+        " " +
+        car.makeAndModel +
+        "<br>" +
+        "Engine" +
+        ":" +
+        " " +
+        car.engine +
+        "<br>" +
+        "Body Style" +
+        ":" +
+        " " +
+        car.bodyStyle;
 
-        document.getElementById("carDetails").innerHTML = generateCarDetails;
+      document.getElementById("carDetails").innerHTML = generateCarDetails;
     </script>
-</body>
+  </body>
 </html>

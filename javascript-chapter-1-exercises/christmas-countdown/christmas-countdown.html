@@ -1,26 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Christmas</title>
-    <link rel="stylesheet" href="stylesheet.css">
-</head>
-<body>
-    <img src="christmas-tree.svg" alt="Christmas Tree" title="Christmas Tree">
+    <link rel="stylesheet" href="stylesheet.css" />
+  </head>
+  <body>
+    <img src="christmas-tree.svg" alt="Christmas Tree" title="Christmas Tree" />
     <h1 id="countdown"></h1>
     <script>
-        let currentDate = new Date();
-        // var xMas = new Date("December 25, 2022 00:00:00")
-        let xMas = new Date (currentDate.getFullYear(), 11, 25) // Christmas Date
-        one_day = 1000 * 60 * 60 * 24 // Day time in (milliseconds)
-        diffInTime = xMas - currentDate // Difference of the two dates (Time)
-        remainingDays = diffInTime / one_day // Convert ms to days
+      let currentDate = new Date();
+      // var xMas = new Date("December 25, 2022 00:00:00")
+      let xMas = new Date(currentDate.getFullYear(), 11, 25); // Christmas Date
+      one_day = 1000 * 60 * 60 * 24; // Day time in (milliseconds)
+      diffInTime = xMas - currentDate; // Difference of the two dates (Time)
+      remainingDays = diffInTime / one_day; // Convert ms to days
 
-        const countDown = "Christmas" + "<br>" + "In" + " " + Math.ceil(remainingDays) + " " + "days"
-        
-        document.getElementById("countdown").innerHTML = countDown;
+      const countDown =
+        "Christmas" +
+        "<br>" +
+        "In" +
+        " " +
+        Math.ceil(remainingDays) +
+        " " +
+        "days";
+
+      document.getElementById("countdown").innerHTML = countDown;
     </script>
-</body>
+  </body>
 </html>
