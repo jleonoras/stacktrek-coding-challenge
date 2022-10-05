@@ -14,7 +14,7 @@ function MovieListPage() {
       axios
         .get(url)
         .then(function (response) {
-          console.log(response);
+          // console.log(response);
 
           const jsonObject = response.data;
           const photoList = jsonObject.photos.photo;
@@ -22,7 +22,7 @@ function MovieListPage() {
           const movieList = photoList.map((item) => {
             return item.title;
           });
-          console.log(movieList);
+          // console.log(movieList);
           setMovieList(movieList);
         })
         .catch(function (error) {
@@ -43,10 +43,10 @@ function MovieListPage() {
         <h1>Movies</h1>
         <p>This is the Movies page</p>
         <ul>
-          {movieList.map((item) => {
+          {movieList.map((item, index) => {
             // what is the key for? it is used to make the UI list efficient
             // read more here https://reactjs.org/docs/lists-and-keys.html
-            return <li key={item}>{item}</li>;
+            return <li key={index}>{item}</li>;
           })}
         </ul>
       </header>

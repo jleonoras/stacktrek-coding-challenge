@@ -1,10 +1,10 @@
 import TopBar from "./component/TopBar";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import About from "./page/About";
-import Home from "./page/Home";
-import MovieListPage from "./page/MovieListPage";
-import Error from "./page/Error";
-import MemeListPage from "./page/MemeListPage";
+import About from "./about/About";
+import Home from "./home/Home";
+import MovieListPage from "./movie/MovieListPage";
+import Error from "./error/Error";
+import MemeListPage from "./meme/MemeListPage";
 
 function App() {
   return (
