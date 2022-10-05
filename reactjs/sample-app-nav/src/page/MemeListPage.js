@@ -6,7 +6,7 @@ const apiUrl =
 
 const MemeListPage = () => {
   const [memeList, setMemeList] = useState(["Loading..."]);
-  const [memeImage, setMemeImage] = useState(["Loading..."]);
+  const [memeImage, setMemeImage] = useState([]);
 
   useEffect(() => {
     axios
