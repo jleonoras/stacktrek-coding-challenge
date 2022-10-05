@@ -5,8 +5,8 @@ const apiUrl =
   "https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=96358825614a5d3b1a1c3fd87fca2b47&format=json&nojsoncallback=true&page=1&text=animal_memes";
 
 const MemeListPage = () => {
-  const [memeList, setMemeList] = useState([]);
-  const [memeImage, setMemeImage] = useState([]);
+  const [memeList, setMemeList] = useState(["Loading..."]);
+  const [memeImage, setMemeImage] = useState(["Loading..."]);
 
   useEffect(() => {
     axios
