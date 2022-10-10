@@ -1,72 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="stylesheet.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="stylesheet.css" />
     <title>Dog Adaptation Page</title>
-</head>
-<body>
+  </head>
+  <body>
     <div id="border">
-        <h2 id="dogName1"></h2>
-        <h2 id="dogAge1"></h2>
-        <img src="img1.jpg" alt="" title="Sushi">
-        <h2 id="toys1"></h2>
+      <h2 id="dogName1"></h2>
+      <h2 id="dogAge1"></h2>
+      <img src="img1.jpg" alt="" title="Sushi" />
+      <h2 id="toys1"></h2>
     </div>
-    <br>
+    <br />
     <div id="border">
-        <h2 id="dogName2"></h2>
-        <h2 id="dogAge2"></h2>
-        <img src="img2.jpg" alt="" title="Dosan">
-        <h2 id="toys2"></h2>
+      <h2 id="dogName2"></h2>
+      <h2 id="dogAge2"></h2>
+      <img src="img2.jpg" alt="" title="Dosan" />
+      <h2 id="toys2"></h2>
     </div>
-    <br>
+    <br />
     <div id="border">
-        <h2 id="dogName3"></h2>
-        <h2 id="dogAge3"></h2>
-        <img src="img3.jpg" alt="" title="Moonchin">
-        <h2 id="toys3"></h2>
+      <h2 id="dogName3"></h2>
+      <h2 id="dogAge3"></h2>
+      <img src="img3.jpg" alt="" title="Moonchin" />
+      <h2 id="toys3"></h2>
     </div>
     <script type="text/javascript">
-        let faveToys = ["Bone", "Water Bottle", "Ball", "Shoes", "Ducklings", "Tabo"]
+      let faveToys = [
+        "Bone",
+        "Water Bottle",
+        "Ball",
+        "Shoes",
+        "Ducklings",
+        "Tabo",
+      ];
 
-        const dogs = {
-            "name1": "Sushi",
-            "age1": 1,
-            "name2": "Dosan",
-            "age2": 2,
-            "name3": "Moonchin",
-            "age3": 2
-        }
+      const dogs = {
+        name1: "Sushi",
+        age1: 1,
+        name2: "Dosan",
+        age2: 2,
+        name3: "Moonchin",
+        age3: 2,
+      };
 
-        function convertDogAge(humanAge) {
-            return humanAge * 7
-        }
+      function convertDogAge(humanAge) {
+        return humanAge * 7;
+      }
 
-        const dogAge1 = convertDogAge(dogs.age1)
-        const dAge1 = `Age: Your doggie is ${dogAge1} years old in dog years!`
-        const dName1 = `Name: ${dogs.name1}`
-        const dToy1 = `fave toys: ${faveToys[0]}, ${faveToys[1]}`
-        document.getElementById("dogAge1").innerHTML = dAge1;
-        document.getElementById("dogName1").innerHTML = dName1;
-        document.getElementById("toys1").innerHTML = dToy1;
+      const dogAge1 = convertDogAge(dogs.age1);
+      const dAge1 = `Age: Your doggie is ${dogAge1} years old in dog years!`;
+      const dName1 = `Name: ${dogs.name1}`;
+      const dToy1 = `fave toys: ${faveToys[0]}, ${faveToys[1]}`;
+      document.getElementById("dogAge1").innerHTML = dAge1;
+      document.getElementById("dogName1").innerHTML = dName1;
+      document.getElementById("toys1").innerHTML = dToy1;
 
-        const dogAge2 = convertDogAge(dogs.age2)
-        const dAge2 = `Age: Your doggie is ${dogAge2} years old in dog years!`
-        const dName2 = `Name: ${dogs.name2}`
-        const dToy2 = `fave toys: ${faveToys[2]}, ${faveToys[3]}`
-        document.getElementById("dogAge2").innerHTML = dAge2;
-        document.getElementById("dogName2").innerHTML = dName2;
-        document.getElementById("toys2").innerHTML = dToy2;
+      const dogAge2 = convertDogAge(dogs.age2);
+      const dAge2 = `Age: Your doggie is ${dogAge2} years old in dog years!`;
+      const dName2 = `Name: ${dogs.name2}`;
+      const dToy2 = `fave toys: ${faveToys[2]}, ${faveToys[3]}`;
+      document.getElementById("dogAge2").innerHTML = dAge2;
+      document.getElementById("dogName2").innerHTML = dName2;
+      document.getElementById("toys2").innerHTML = dToy2;
 
-        const dogAge3 = convertDogAge(dogs.age3)
-        const dAge3 = `Age: Your doggie is ${dogAge3} years old in dog years!`
-        const dName3 = `Name: ${dogs.name3}`
-        const dToy3 = `fave toys: ${faveToys[4]}, ${faveToys[5]}`
-        document.getElementById("dogAge3").innerHTML = dAge3;
-        document.getElementById("dogName3").innerHTML = dName3;
-        document.getElementById("toys3").innerHTML = dToy3;
+      const dogAge3 = convertDogAge(dogs.age3);
+      const dAge3 = `Age: Your doggie is ${dogAge3} years old in dog years!`;
+      const dName3 = `Name: ${dogs.name3}`;
+      const dToy3 = `fave toys: ${faveToys[4]}, ${faveToys[5]}`;
+      document.getElementById("dogAge3").innerHTML = dAge3;
+      document.getElementById("dogName3").innerHTML = dName3;
+      document.getElementById("toys3").innerHTML = dToy3;
     </script>
-</body>
+  </body>
 </html>
