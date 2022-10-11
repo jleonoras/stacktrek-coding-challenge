@@ -7,7 +7,7 @@ const Error = () => {
     <section className="App-header">
       <img src={logo} className="App-logo" alt="logo" />
       <h1>Error 404</h1>
-      <p>Page not found...</p>
+      <p>File not found</p>
       <Link to="/" className="App-link">
         Back to Home
       </Link>

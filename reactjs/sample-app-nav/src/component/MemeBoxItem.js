@@ -36,21 +36,30 @@ const MemeBoxItem = () => {
   }, []);
 
   return (
-    <div className="App">
-      <section className="App-header">
-        <ul>
-          {memeList.map((item, index) => {
-            return (
-              <li key={index}>
-                <figure>
-                  <img src={item.baseImageUrl} alt={item.title}></img>
-                  <figcaption>{item.title}</figcaption>
-                </figure>
-              </li>
-            );
-          })}
-        </ul>
-      </section>
+    <div className="container mx-auto">
+      <ul className="row row-cols-1 row-cols-md-4 g-4">
+        {memeList.map((item, index) => {
+          return (
+            <li key={index} className="col">
+              <figure className="border rounded">
+                <div className="ratio ratio-1x1">
+                  <img
+                    className="card-img-top img-fluid"
+                    src={item.baseImageUrl}
+                    alt={item.title}
+                  ></img>
+                </div>
+                <div className="card-body">
+                  {/* <figcaption className="card-title">{item.title}</figcaption> */}
+                  <span className="card-text badge text-wrap text-break fw-normal">
+                    {item.title}
+                  </span>
+                </div>
+              </figure>
+            </li>
+          );
+        })}
+      </ul>
     </div>
   );
 };

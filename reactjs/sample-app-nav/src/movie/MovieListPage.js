@@ -5,7 +5,7 @@ const url =
   "https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=96358825614a5d3b1a1c3fd87fca2b47&format=json&nojsoncallback=true&page=1&text=movies";
 
 function MovieListPage() {
-  const [movieList, setMovieList] = useState(["Loading..."]);
+  const [movieList, setMovieList] = useState([]);
 
   useEffect(
     () => {
