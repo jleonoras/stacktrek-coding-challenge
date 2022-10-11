@@ -24,18 +24,10 @@ const displayInfo = () => {
   document.getElementById("myName").innerHTML = xName;
   document.getElementById("myCareer").innerHTML = xCareer;
 
-  // document.getElementById("hobbies").innerHTML = myProfile.profileList[0];
-  // document.getElementById("favFoods").innerHTML = myProfile.profileList[1];
-  // document.getElementById("favSeries").innerHTML = myProfile.profileList[2];
-  // document.getElementById("favMovies").innerHTML = myProfile.profileList[3];
-
-  document.getElementById("hobbies").innerHTML = myProfile.profileList.hobbies;
-  document.getElementById("favFoods").innerHTML =
-    myProfile.profileList.favFoods;
-  document.getElementById("favSeries").innerHTML =
-    myProfile.profileList.favSeries;
-  document.getElementById("favMovies").innerHTML =
-    myProfile.profileList.faveMovies;
+  document.getElementById("hobbies").innerHTML = myProfile.profileList[0];
+  document.getElementById("favFoods").innerHTML = myProfile.profileList[1];
+  document.getElementById("favSeries").innerHTML = myProfile.profileList[2];
+  document.getElementById("favMovies").innerHTML = myProfile.profileList[3];
 };
 
 const makeUL = (array) => {
