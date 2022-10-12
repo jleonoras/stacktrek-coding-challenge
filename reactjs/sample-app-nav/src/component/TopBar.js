@@ -3,25 +3,21 @@ import { NavLink, Link } from "react-router-dom";
 
 function TopBar() {
   return (
-    // <div className="topnav">
-    //   <NavLink to="/" end>
-    //     Home
-    //   </NavLink>
-    //   <NavLink to="/movies">Movies</NavLink>
-    //   <NavLink to="/memes">Memes</NavLink>
-    //   <NavLink to="/about">About</NavLink>
-    // </div>
-    <nav className="navbar navbar-expand-md navbar-dark bg-black sticky-top">
+    <nav className="navbar navbar-expand-md navbar-dark bg-black fixed-top">
       <div className="container" id="topnav">
-        <Link className="navbar-brand" to="/">
+        <Link className="navbar-brand container-inline" to="/">
           <img
             className="d-inline-block align-top"
             src="https://getbootstrap.com/docs/5.2/assets/brand/bootstrap-logo.svg"
             alt=""
-            width="37"
+            width="35"
             height="30"
+            loading="lazy"
+            id="brandLogo"
           ></img>
-          Brand Logo
+          <i className="fa-solid fa-chevron-left"></i>
+          John Leonoras /<i className="fa-duotone fa-slash-forward"></i>
+          <i className="fa-solid fa-chevron-right"></i>
         </Link>
         <button
           className="navbar-toggler"

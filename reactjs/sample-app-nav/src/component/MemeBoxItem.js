@@ -20,8 +20,10 @@ const MemeBoxItem = () => {
           const baseImageUrl = "https://live.staticflickr.com";
           // const imageSize = "w";
           const imageFormat = "jpg";
+          const itemIndex = photoList.indexOf(item.title);
 
           return new Meme({
+            index: itemIndex,
             title: item.title,
             baseImageUrl: `${baseImageUrl}/${item.server}/${item.id}_${item.secret}.${imageFormat}`,
           });
@@ -37,23 +39,33 @@ const MemeBoxItem = () => {
 
   return (
     <div className="container mx-auto">
-      <ul className="row row-cols-1 row-cols-md-4 g-4">
+      <ul className="row row-cols-1 row-cols-md-4 g-4 list-unstyled">
         {memeList.map((item, index) => {
           return (
             <li key={index} className="col">
-              <figure className="border rounded">
+              <figure className="card h-100 border-info">
                 <div className="ratio ratio-1x1">
                   <img
-                    className="card-img-top img-fluid"
+                    className="card-img-top"
                     src={item.baseImageUrl}
                     alt={item.title}
+                    loading="lazy"
                   ></img>
                 </div>
-                <div className="card-body">
-                  {/* <figcaption className="card-title">{item.title}</figcaption> */}
-                  <span className="card-text badge text-wrap text-break fw-normal">
+                <div className="card-body text-secondary">
+                  <figcaption
+                    className="card-title badge text-wrap text-break fw-normal"
+                    id="title"
+                  >
+                    <br />
                     {item.title}
-                  </span>
+                  </figcaption>
+                  {/* <span className="card-text badge text-wrap text-break fw-normal">
+                    {item.title}
+                  </span> */}
+                </div>
+                <div className="card-footer">
+                  <small className="text-muted">#{index + 1}</small>
                 </div>
               </figure>
             </li>

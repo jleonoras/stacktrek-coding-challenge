@@ -4,9 +4,9 @@ import MemeBoxItem from "../component/MemeBoxItem";
 const MemeListPage = () => {
   return (
     <div className="App">
-      <header className="App-header">
-        <h1>Memes</h1>
-        <p>This is the Memes page</p>
+      <header id="meme-page" className="App-header">
+        <h1 id="meme-page-title">Memes</h1>
+        <p id="meme-page-description">This is the Memes page</p>
         <MemeBoxItem />
       </header>
     </div>

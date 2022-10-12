@@ -42,7 +42,7 @@ function MovieListPage() {
       <header className="App-header">
         <h1>Movies</h1>
         <p>This is the Movies page</p>
-        <ul>
+        <ul className="list-unstyled">
           {movieList.map((item, index) => {
             // what is the key for? it is used to make the UI list efficient
             // read more here https://reactjs.org/docs/lists-and-keys.html
